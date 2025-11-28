@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoTrack | Habit Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page-habits">
+    <header class="site-nav">
+      <div class="logo">EcoTrack</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="tracker.html">Tracker</a>
+        <a href="habits.html" class="active">Habit Studio</a>
+        <a href="insights.html">Insights</a>
+      </nav>
+      <a class="primary-btn nav-btn" href="insights.html">Insight lab</a>
+    </header>
+
+    <main class="home-shell">
+      <section class="hero hero-habits">
+        <div class="hero-col">
+          <p class="tag">Habit Studio</p>
+          <h1>Turn tiny actions into unstoppable streaks</h1>
+          <p class="subtitle">
+            Pick challenges, toggle eco-habits, and visualize your weekly
+            savings. These playful cards keep momentum strong.
+          </p>
+        </div>
+        <div class="habit-scorecard">
+          <div>
+            <p class="eyebrow">Weekly streak</p>
+            <p class="hero-value">5 / 7 days</p>
+          </div>
+          <div class="streak-bar">
+            <span style="width: 72%"></span>
+          </div>
+          <p class="helper">Best run: 11 days</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">Featured routines</p>
+          <h2>Pick a color-coded habit lane</h2>
+        </div>
+        <div class="habit-lanes">
+          <article class="lane-card lane-mint">
+            <h3>Transit swap</h3>
+            <p>Bike or bus twice this week to bank 1.2 kg CO₂e savings.</p>
+            <ul>
+              <li>✔ Map two short trips</li>
+              <li>✔ Prep gear the night before</li>
+              <li>□ Log reflection photo</li>
+            </ul>
+          </article>
+          <article class="lane-card lane-lilac">
+            <h3>Plant-forward meals</h3>
+            <p>Choose three veggie lunches and share your favorite recipe.</p>
+            <ul>
+              <li>✔ Grocery list ready</li>
+              <li>□ Invite a friend</li>
+              <li>□ Celebrate with snack</li>
+            </ul>
+          </article>
+          <article class="lane-card lane-sunrise">
+            <h3>Dorm energy detox</h3>
+            <p>Unplug idle devices daily and open windows for daylight laps.</p>
+            <ul>
+              <li>✔ Label chargers</li>
+              <li>✔ Power strip check</li>
+              <li>□ Sunday recap</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split">
+        <div>
+          <p class="eyebrow">Weekly planner</p>
+          <h2>Color your habit timeline</h2>
+          <p class="helper">
+            Track when you complete each action. Two tones keep weekdays and
+            weekends distinct.
+          </p>
+        </div>
+        <div class="timeline">
+          <div class="day">
+            <span>Mon</span>
+            <div><i class="pill mint"></i><i class="pill lilac"></i></div>
+          </div>
+          <div class="day">
+            <span>Tue</span>
+            <div><i class="pill mint"></i><i class="pill sunrise"></i></div>
+          </div>
+          <div class="day">
+            <span>Wed</span>
+            <div><i class="pill lilac"></i></div>
+          </div>
+          <div class="day">
+            <span>Thu</span>
+            <div><i class="pill mint"></i><i class="pill lilac"></i></div>
+          </div>
+          <div class="day weekend">
+            <span>Fri</span>
+            <div><i class="pill sunrise"></i></div>
+          </div>
+          <div class="day weekend">
+            <span>Sat</span>
+            <div><i class="pill lilac"></i><i class="pill sunrise"></i></div>
+          </div>
+          <div class="day weekend">
+            <span>Sun</span>
+            <div><i class="pill mint"></i></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section challenge-board">
+        <div>
+          <p class="eyebrow">Challenge board</p>
+          <h2>Stack goals for the month</h2>
+        </div>
+        <div class="challenge-grid">
+          <article>
+            <h3>Microwave-free week</h3>
+            <p>Batch cook and reheat on the stove to save 0.4 kg CO₂e.</p>
+            <button class="primary-btn ghost">Join</button>
+          </article>
+          <article>
+            <h3>Reuse relay</h3>
+            <p>Carry a bottle & tote for 10 days. Log photos for bonus points.</p>
+            <button class="primary-btn ghost">Join</button>
+          </article>
+          <article>
+            <h3>Lights-out hour</h3>
+            <p>Host a dorm-wide lights-out hour every Thursday night.</p>
+            <button class="primary-btn ghost">Join</button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>EcoTrack Habit Studio · Color your week with greener wins.</p>
+    </footer>
+  </body>
+</html>
+

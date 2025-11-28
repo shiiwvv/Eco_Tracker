@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoTrack | Daily Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page-tracker">
+    <header class="site-nav">
+      <div class="logo">EcoTrack</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="tracker.html" class="active">Tracker</a>
+        <a href="habits.html">Habit Studio</a>
+        <a href="insights.html">Insights</a>
+      </nav>
+      <a class="primary-btn nav-btn" href="habits.html">Habit studio</a>
+    </header>
+
+    <div class="app-shell">
+      <header class="hero hero-tracker">
+        <div>
+          <p class="tag">Live footprint dashboard</p>
+          <h1>Log your day, watch your impact shift</h1>
+          <p class="subtitle">
+            Track emissions from transport, food, energy, and waste. EcoTrack
+            auto-calculates kg CO₂e so you can focus on smarter choices.
+          </p>
+        </div>
+        <div class="hero-summary">
+          <div>
+            <p class="hero-label">Today's footprint</p>
+            <p class="hero-value" id="hero-total">0.00 kg CO₂e</p>
+          </div>
+          <div>
+            <p class="hero-label">Eco habit score</p>
+            <div class="score-pill">
+              <span id="hero-score">0%</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="panel span-2">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Overview</p>
+              <h2>Carbon dashboard</h2>
+            </div>
+            <button class="ghost-btn" id="reset-day">Reset day</button>
+          </div>
+          <div class="summary-grid">
+            <article class="summary-card">
+              <p class="label">Total emissions</p>
+              <p class="value" id="total-emissions">0.00 kg</p>
+              <p class="helper">Target: 5.0 kg / day</p>
+            </article>
+            <article class="summary-card">
+              <p class="label">Top source</p>
+              <p class="value" id="top-source">—</p>
+              <p class="helper">Highest category today</p>
+            </article>
+            <article class="summary-card">
+              <p class="label">Saved via habits</p>
+              <p class="value" id="habit-savings">0.00 kg</p>
+              <p class="helper">Est. reduction from habits</p>
+            </article>
+          </div>
+          <div class="breakdown" id="breakdown"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Log activity</p>
+              <h2>Add daily actions</h2>
+            </div>
+          </div>
+          <form id="activity-form" class="form">
+            <label class="field">
+              <span>Description</span>
+              <input
+                type="text"
+                name="description"
+                placeholder="e.g., Biked to class"
+                required
+              />
+            </label>
+            <label class="field">
+              <span>Category</span>
+              <select name="category" required>
+                <option value="" disabled selected>Select one</option>
+                <option value="transport">Transport</option>
+                <option value="energy">Home energy</option>
+                <option value="food">Food choices</option>
+                <option value="waste">Waste</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Amount</span>
+              <input
+                type="number"
+                min="0"
+                step="0.1"
+                name="amount"
+                placeholder="Distance, kWh, meals…"
+                required
+              />
+            </label>
+            <p class="helper">
+              We use vetted estimates (kg CO₂e) per category. Values are saved
+              locally.
+            </p>
+            <button type="submit" class="primary-btn">Track action</button>
+          </form>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Habits</p>
+              <h2>Eco-friendly routines</h2>
+            </div>
+          </div>
+          <div class="habits" id="habit-list"></div>
+        </section>
+
+        <section class="panel span-2">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Activity feed</p>
+              <h2>Daily footprint log</h2>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Action</th>
+                  <th>Category</th>
+                  <th>Amount</th>
+                  <th>Impact</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="activity-table"></tbody>
+            </table>
+            <p class="empty" id="empty-state">No actions logged yet.</p>
+          </div>
+        </section>
+
+        <section class="panel span-2">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Insights</p>
+              <h2>Actionable guidance</h2>
+            </div>
+          </div>
+          <div class="insights" id="insight-list"></div>
+        </section>
+      </main>
+
+      <section class="section highlight secondary">
+        <div>
+          <h2>Tip: set a daily reminder</h2>
+          <p class="helper">
+            Log activities right after meals or travel. Consistency sharpens your
+            data in just a few taps.
+          </p>
+        </div>
+        <a class="ghost-btn" href="habits.html">Build a routine →</a>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <p>EcoTrack © 2025 · Track • Practice • Reflect.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
